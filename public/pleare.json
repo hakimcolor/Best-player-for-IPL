@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Virat Kohli",
+    "image": "https://i.ibb.co.com/zW7HhQp0/Virat-Kohli-India-celebrates-50th-century-Cricket-November-15-2023.webp",
+    "nation": "India",
+    "role": "Batter",
+    "rating": 95,
+    "style": "Right-hand Bat",
+    "price": 150000000
+  },
+  {
+    "id": 2,
+    "name": "MS Dhoni",
+    "image": "https://i.ibb.co.com/xK0023N3/download.jpg",
+    "nation": "India",
+    "role": "Wicketkeeper Batter",
+    "rating": 92,
+    "style": "Right-hand Bat",
+    "price": 120000000
+  },
+  {
+    "id": 3,
+    "name": "Rohit Sharma",
+    "image": "https://example.com/rohit.jpg",
+    "nation": "India",
+    "role": "Batter",
+    "rating": 93,
+    "style": "Right-hand Bat",
+    "price": 160000000
+  },
+  {
+    "id": 4,
+    "name": "Rashid Khan",
+    "image": "https://i.ibb.co.com/mFPR5QD2/images.jpg",
+    "nation": "Afghanistan",
+    "role": "All-Rounder",
+    "rating": 90,
+    "style": "Right-hand Bat / Right-arm Leg Spin",
+    "price": 100000000
+  },
+  {
+    "id": 5,
+    "name": "Ben Stokes",
+    "image": "https://i.ibb.co.com/fYVLzR99/Ben-Stokes-AP-Ashes.webp",
+    "nation": "England",
+    "role": "All-Rounder",
+    "rating": 88,
+    "style": "Left-hand Bat / Right-arm Medium",
+    "price": 162500000
+  },
+  {
+    "id": 6,
+    "name": "David Warner",
+    "image": "https://i.ibb.co.com/V0gpnTb2/download-1.jpg",
+    "nation": "Australia",
+    "role": "Batter",
+    "rating": 91,
+    "style": "Left-hand Bat",
+    "price": 125000000
+  },
+  {
+    "id": 7,
+    "name": "Jasprit Bumrah",
+    "image": "https://i.ibb.co.com/jjvd0PP/download-2.jpg",
+    "nation": "India",
+    "role": "Bowler",
+    "rating": 93,
+    "style": "Right-arm Fast",
+    "price": 140000000
+  },
+  {
+    "id": 8,
+    "name": "Shubman Gill",
+    "image": "https://i.ibb.co.com/CpNsFCv7/Shubman-Gill.jpg",
+    "nation": "India",
+    "role": "Batter",
+    "rating": 89,
+    "style": "Right-hand Bat",
+    "price": 80000000
+  },
+  {
+    "id": 9,
+    "name": "Andre Russell",
+    "image": "https://i.ibb.co.com/TB2xrr0f/Andre-Russell.jpg",
+    "nation": "West Indies",
+    "role": "All-Rounder",
+    "rating": 90,
+    "style": "Right-hand Bat / Right-arm Fast",
+    "price": 120000000
+  },
+  {
+    "id": 10,
+    "name": "Shakib Al Hasan",
+    "image": "https://example.com/shakib.jpg",
+    "nation": "Bangladesh",
+    "role": "All-Rounder",
+    "rating": 87,
+    "style": "https://i.ibb.co.com/LzDPS7FM/Shakib-Al-Hasan.jpg",
+    "price": 60000000
+  },
+  {
+    "id": 11,
+    "name": "Glenn Maxwell",
+    "image": "https://example.com/maxwell.jpg",
+    "nation": "Australia",
+    "role": "All-Rounder",
+    "rating": 88,
+    "style": "https://i.ibb.co.com/PzVkJnVr/Glenn-Maxwell.jpg",
+    "price": 110000000
+  },
+  {
+    "id": 12,
+    "name": "KL Rahul",
+    "image": "https://i.ibb.co.com/cSMyfWTK/KL-Rahul.jpg",
+    "nation": "India",
+    "role": "Wicketkeeper Batter",
+    "rating": 90,
+    "style": "Right-hand Bat",
+    "price": 170000000
+  }
+]
