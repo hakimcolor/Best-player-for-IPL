@@ -12,7 +12,7 @@
   {
     "id": 2,
     "name": "MS Dhoni",
-    "image": "https://i.ibb.co.com/xK0023N3/download.jpg",
+    "image": "https://i.ibb.co.com/27449r0j/MS-Dhoni-MS-Dhoni-MS-Dhoni-MS-Dhoni-MS-Dhoni.webp",
     "nation": "India",
     "role": "Wicketkeeper Batter",
     "rating": 92,
@@ -22,7 +22,7 @@
   {
     "id": 3,
     "name": "Rohit Sharma",
-    "image": "https://example.com/rohit.jpg",
+    "image": "https://i.ibb.co.com/cR7LC6z/download-2.jpg",
     "nation": "India",
     "role": "Batter",
     "rating": 93,
@@ -102,7 +102,7 @@
   {
     "id": 11,
     "name": "Glenn Maxwell",
-    "image": "https://example.com/maxwell.jpg",
+    "image": "https://i.ibb.co.com/PzVkJnVr/Glenn-Maxwell.jpg",
     "nation": "Australia",
     "role": "All-Rounder",
     "rating": 88,

@@ -2,48 +2,54 @@ import React from 'react';
 import navImg from '../assets/logo.png';
 import logoImg from '../assets/coin.png';
 import bgImg from '../assets/bg-shadow.png';
-import LogoFooter from'../assets/banner-main.png'
+import LogoFooter from '../assets/banner-main.png';
 
 const Navber = () => {
   return (
-    <div>
-      <div className="navbar 2xl:max-w-[1200px] md:max-w-[800px] mx-auto">
-        <div className="flex-1">
+    <div className="2xl:max-w-[1300px] md:max-w-[800px] mx-auto px-4">
+      {/* Navbar */}
+      <div className="navbar flex items-center justify-between bg-white rounded-xl shadow-lg py-3 px-6 mb-6">
+        <div className="flex items-center gap-2">
           <img className="w-[60px] h-[60px]" src={navImg} alt="Logo" />
         </div>
-        <div className="flex items-center">
-          <span className="mr-2">6000000000</span>
-          <span className="mr-1">coin</span>
-          <img src={logoImg} alt="Coin" className="w-[30px] h-[30px]" />
+        <div className="flex items-center bg-yellow-100 rounded-full px-4 py-2 shadow gap-2">
+          <span className="text-lg font-semibold text-gray-700">
+            6,000,000,000
+          </span>
+          <img src={logoImg} alt="Coin" className="w-[28px] h-[28px]" />
+          <span className="text-sm font-medium text-yellow-700">Coins</span>
         </div>
       </div>
 
-      <div className="bg-black  2xl:max-w-[1200px] md:max-w-[800px] mx-auto rounded-xl mt-5 relative">
-        <div>
-          <img className='rounded-xl' src={bgImg} alt="" />
-        </div>
-        {/* <div className="absolute top-13 left-30 text-white flex flex-col items-center justify-center text-center   ">
-          <img className="w-[24px h-[120px]" src={LogoFooter} alt="" />
-          <h1 className="text-[24px] font-bold  ">
-            Assemble Your Ultimate Dream 11 Cricket Team
-          </h1>
-          <p className="text-gray-300">Beyond Boundaries Beyond Limits</p>
-        </div> */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white p-4 gap-y-4">
+      {/* Main Card */}
+      <div
+        className="relative rounded-xl mt-5 overflow-hidden shadow-xl"
+        style={{
+          background: 'black'
+          ,
+          backgroundImage : `url(${bgImg})`
+        }}
+      >
+        <img
+          className="absolute inset-0 w-full h-full object-cover opacity-30"
+          src={bgImg}
+          alt=""
+        />
+        <div className="relative flex flex-col items-center justify-center text-center text-white p-8 gap-y-6 z-10">
           <img
-            className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] lg:w-[140px] lg:h-[160px] mb-4"
+            className="w-[90px] h-[90px] md:w-[110px] md:h-[110px] lg:w-[150px] lg:h-[170px] mb-4 drop-shadow-lg"
             src={LogoFooter}
-            alt=""
+            alt="Banner"
           />
-
-          <h1 className="text-[18px] md:text-[22px] lg:text-[32px] font-bold leading-snug">
+          <h1 className="text-[22px] md:text-[28px] lg:text-[36px] font-extrabold leading-snug drop-shadow">
             Assemble Your Ultimate Dream 11 Cricket Team
           </h1>
-
-          <p className="text-gray-300 text-sm md:text-base lg:text-lg">
-            Beyond Boundaries Beyond Limits
+          <p className="text-gray-200 text-base md:text-lg lg:text-xl font-medium">
+            Beyond Boundaries, Beyond Limits
           </p>
-          <button className='p-2 bg-yellow-200 font-bold  text-black rounded-xl'>Claim Free Credit</button>
+          <button className="p-3 px-6 bg-yellow-300 font-bold text-black rounded-xl shadow hover:bg-yellow-400 transition-all duration-200">
+            Claim Free Credit
+          </button>
         </div>
       </div>
     </div>
@@ -51,3 +57,4 @@ const Navber = () => {
 };
 
 export default Navber;
+// ...existing code...
