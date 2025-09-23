@@ -90,25 +90,26 @@
     "price": 120000000
   },
   {
-    "id": 10,
-    "name": "Shakib Al Hasan",
-    "image": "https://example.com/shakib.jpg",
-    "nation": "Bangladesh",
-    "role": "All-Rounder",
-    "rating": 87,
-    "style": "https://i.ibb.co.com/LzDPS7FM/Shakib-Al-Hasan.jpg",
-    "price": 60000000
-  },
-  {
-    "id": 11,
-    "name": "Glenn Maxwell",
-    "image": "https://i.ibb.co.com/PzVkJnVr/Glenn-Maxwell.jpg",
-    "nation": "Australia",
-    "role": "All-Rounder",
-    "rating": 88,
-    "style": "https://i.ibb.co.com/PzVkJnVr/Glenn-Maxwell.jpg",
-    "price": 110000000
-  },
+  "id": 10,
+  "name": "Shakib Al Hasan",
+  "image": "https://i.ibb.co.com/LzDPS7FM/Shakib-Al-Hasan.jpg",
+  "nation": "Bangladesh",
+  "role": "All-Rounder",
+  "rating": 87,
+  "style": "Left-handed Bat | Slow Left-Arm Orthodox",
+  "price": 60000000
+},
+{
+  "id": 11,
+  "name": "Glenn Maxwell",
+  "image": "https://i.ibb.co.com/PzVkJnVr/Glenn-Maxwell.jpg",
+  "nation": "Australia",
+  "role": "All-Rounder",
+  "rating": 88,
+  "style": "Right-handed Bat | Right-arm Off Break",
+  "price": 110000000
+},
+
   {
     "id": 12,
     "name": "KL Rahul",

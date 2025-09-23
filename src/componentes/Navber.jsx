@@ -6,7 +6,7 @@ import LogoFooter from '../assets/banner-main.png';
 
 const Navber = () => {
   return (
-    <div className="2xl:max-w-[1300px] md:max-w-[800px] mx-auto px-4">
+    <div className="2xl:max-w-[1300px] md:max-w-[800px] mx-auto ">
       {/* Navbar */}
       <div className="navbar flex items-center justify-between bg-white rounded-xl shadow-lg py-3 px-6 mb-6">
         <div className="flex items-center gap-2">
@@ -14,14 +14,14 @@ const Navber = () => {
         </div>
         <div className="flex items-center bg-yellow-100 rounded-full px-4 py-2 shadow gap-2">
           <span className="text-lg font-semibold text-gray-700">
-            6,000,000,000
+            600000000000
           </span>
           <img src={logoImg} alt="Coin" className="w-[28px] h-[28px]" />
           <span className="text-sm font-medium text-yellow-700">Coins</span>
         </div>
       </div>
 
-      {/* Main Card */}
+      {/* Card */}
       <div
         className="relative rounded-xl mt-5 overflow-hidden shadow-xl"
         style={{
