@@ -4,7 +4,7 @@ import logoImg from '../assets/coin.png';
 import bgImg from '../assets/bg-shadow.png';
 import LogoFooter from '../assets/banner-main.png';
 
-const Navber = () => {
+const Navber = ({ availableBalance }) => {
   return (
     <div className="2xl:max-w-[1300px] md:max-w-[800px] mx-auto ">
       {/* Navbar */}
@@ -14,7 +14,7 @@ const Navber = () => {
         </div>
         <div className="flex items-center bg-yellow-100 rounded-full px-4 py-2 shadow gap-2">
           <span className="text-lg font-semibold text-gray-700">
-            600000000000
+            {availableBalance}
           </span>
           <img src={logoImg} alt="Coin" className="w-[28px] h-[28px]" />
           <span className="text-sm font-medium text-yellow-700">Coins</span>
@@ -25,9 +25,8 @@ const Navber = () => {
       <div
         className="relative rounded-xl mt-5 overflow-hidden shadow-xl"
         style={{
-          background: 'black'
-          ,
-          backgroundImage : `url(${bgImg})`
+          background: 'black',
+          backgroundImage: `url(${bgImg})`,
         }}
       >
         <img
