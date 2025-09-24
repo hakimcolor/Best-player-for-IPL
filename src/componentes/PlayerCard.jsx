@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import cardImg from '../assets/Group.png';
 import Groupone from '../assets/Grounone.png';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const PlayerCard = ({
   player,
@@ -10,8 +12,16 @@ const PlayerCard = ({
   selectedPlr,
 }) => {
   const [selecteated, setSelecteated] = useState(false);
-
+ const isBalanceLow = availableBalance < 99000000;
   const hnDLClick = () => {
+     if (isBalanceLow) {
+      alert('Available balance is too low! Minimum required: $99,000,000');
+       return;
+     }
+
+     if (selecteated) {
+       return;
+     }
     setSelecteated(true);
     setAvailableBalance(availableBalance - player.price);
     setSelectePlr([...selectedPlr, player]);
@@ -63,7 +73,8 @@ const PlayerCard = ({
                   selecteated
                     ? 'bg-gray-300 text-gray-400 cursor-not-allowed'
                     : 'border-gray-300'
-                }`}
+                  }`}
+                
               >
                 {selecteated ? 'Selected' : 'Choose Player'}
               </button>

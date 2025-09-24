@@ -2,6 +2,7 @@ import React, { Suspense, useState } from 'react';
 import Navber from './componentes/Navber';
 import AvailablePlr from './componentes/AvailablePlr';
 import SelectedPlr from './componentes/SelectedPlr';
+
 const fetchPlayer = async () => {
   const res = await fetch('./pleare.json');
   return res.json();
@@ -10,13 +11,18 @@ const fetchPlayer = async () => {
 const plyersPromise = fetchPlayer();
 
 function App() {
-  const [availableBalance, setAvailableBalance] = useState(600000000000);
+  const [availableBalance, setAvailableBalance] = useState(990000000);
   const [returand, setReturand] = useState();
-  const [selectedPlr, setSelectePlr] = useState([])
+  const [selectedPlr, setSelectePlr] = useState([]);
   // console.log(selectedPlr);
-  
+
   const handeldClick = () => {
     setReturand(!returand);
+  };
+  const RemoveSlect = (e) => {
+    const filteData = selectedPlr.filter((plr) => plr.id !== e.id);
+    setSelectePlr(filteData);
+    setAvailableBalance(availableBalance + e.price);
   };
 
   // if you use async await so you  need first call the function in the app componentes and then you can props other componentes ok
@@ -24,9 +30,12 @@ function App() {
   return (
     <div>
       <Navber availableBalance={availableBalance} />
-
       <div className="items-center flex justify-between 2xl:max-w-[1300px] md:max-w-[800px] mx-auto mt-20">
-        <div className=" font-bold text-[30px]">Available players </div>
+        <div className=" font-bold text-[30px]">
+          {returand
+            ? `Selected Player (${selectedPlr.length}/6)`
+            : 'Available players'}{' '}
+        </div>
         <div className="font-bold">
           <button
             onClick={handeldClick}
@@ -42,12 +51,15 @@ function App() {
               returand ? 'bg-red-400' : 'bg-gray-50'
             } p-3  w-32`}
           >
-            Selected<span>(0)</span>
+            Selected<span>({selectedPlr.length})</span>
           </button>
         </div>
       </div>
       {returand ? (
-        <SelectedPlr selectedPlr={selectedPlr}></SelectedPlr>
+        <SelectedPlr
+          RemoveSlect={RemoveSlect}
+          selectedPlr={selectedPlr}
+        ></SelectedPlr>
       ) : (
         <Suspense
           fallback={<span className="loading loading-dots loading-xl"></span>}
@@ -60,7 +72,8 @@ function App() {
             availableBalance={availableBalance}
           ></AvailablePlr>
         </Suspense>
-      )}
+      )}{' '}
+     
     </div>
   );
 }
