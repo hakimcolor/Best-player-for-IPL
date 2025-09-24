@@ -13,7 +13,7 @@ function App() {
   const [availableBalance, setAvailableBalance] = useState(600000000000);
   const [returand, setReturand] = useState();
   const [selectedPlr, setSelectePlr] = useState([])
-  console.log(selectedPlr);
+  // console.log(selectedPlr);
   
   const handeldClick = () => {
     setReturand(!returand);
