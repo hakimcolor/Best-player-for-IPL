@@ -12,19 +12,25 @@ const PlayerCard = ({
   selectedPlr,
 }) => {
   const [selecteated, setSelecteated] = useState(false);
- const isBalanceLow = availableBalance < 99000000;
-  const hnDLClick = () => {
-     if (isBalanceLow) {
-      alert('Available balance is too low! Minimum required: $99,000,000');
-       return;
-     }
+  const isBalanceLow = availableBalance < 99000000;
 
-     if (selecteated) {
-       return;
-     }
+  const hnDLClick = () => {
+    if (isBalanceLow) {
+      toast.error(
+        `Available balance is too low! Minimum required: $99,000,000`
+      );
+      return;
+    }
+
+    if (selecteated) {
+      return;
+    }
+
     setSelecteated(true);
     setAvailableBalance(availableBalance - player.price);
     setSelectePlr([...selectedPlr, player]);
+
+    toast.success(`${player.name} has been selected for $${player.price}!`);
   };
 
   return (
@@ -73,8 +79,7 @@ const PlayerCard = ({
                   selecteated
                     ? 'bg-gray-300 text-gray-400 cursor-not-allowed'
                     : 'border-gray-300'
-                  }`}
-                
+                }`}
               >
                 {selecteated ? 'Selected' : 'Choose Player'}
               </button>

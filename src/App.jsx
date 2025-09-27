@@ -2,7 +2,8 @@ import React, { Suspense, useState } from 'react';
 import Navber from './componentes/Navber';
 import AvailablePlr from './componentes/AvailablePlr';
 import SelectedPlr from './componentes/SelectedPlr';
-
+import Footer from './componentes/Footer';
+ import { ToastContainer } from 'react-toastify';
 const fetchPlayer = async () => {
   const res = await fetch('./pleare.json');
   return res.json();
@@ -33,14 +34,14 @@ function App() {
       <div className="items-center flex justify-between 2xl:max-w-[1300px] md:max-w-[800px] mx-auto mt-20">
         <div className=" font-bold text-[30px]">
           {returand
-            ? `Selected Player (${selectedPlr.length}/6)`
+            ? `Selected Player (${selectedPlr.length}/7)`
             : 'Available players'}{' '}
         </div>
         <div className="font-bold">
           <button
             onClick={handeldClick}
             className={` ${
-              returand ? 'bg-gray-50' : 'bg-cyan-300'
+              returand ? 'bg-gray-50' : 'bg-cyan-600 text-white'
             } p-3  w-32 rounded-l-2xl cursor-pointer`}
           >
             Available
@@ -48,7 +49,7 @@ function App() {
           <button
             onClick={handeldClick}
             className={`cursor-pointer rounded-r-2xl bg-gray-50 ${
-              returand ? 'bg-red-400' : 'bg-gray-50'
+              returand ? 'bg-red-600 text-white' : 'bg-gray-50'
             } p-3  w-32`}
           >
             Selected<span>({selectedPlr.length})</span>
@@ -57,6 +58,7 @@ function App() {
       </div>
       {returand ? (
         <SelectedPlr
+          returand={returand}
           RemoveSlect={RemoveSlect}
           selectedPlr={selectedPlr}
         ></SelectedPlr>
@@ -73,7 +75,8 @@ function App() {
           ></AvailablePlr>
         </Suspense>
       )}{' '}
-     
+      <Footer></Footer>
+      <ToastContainer />
     </div>
   );
 }

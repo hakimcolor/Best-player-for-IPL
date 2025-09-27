@@ -1,8 +1,7 @@
 import React from 'react';
 import SelecteadCard from './SelecteadCard';
-
-const SelectedPlr = ({ selectedPlr, RemoveSlect }) => {
-  console.log(selectedPlr);
+const SelectedPlr = ({ selectedPlr, RemoveSlect, returand }) => {
+  // console.log(selectedPlr);
   // console.log(selectedPlr.player);
 
   return (
@@ -12,7 +11,8 @@ const SelectedPlr = ({ selectedPlr, RemoveSlect }) => {
           RemoveSlect={RemoveSlect}
           playrss={playrss}
         ></SelecteadCard>
-      ))}
+      ))}{' '}
+      
     </div>
   );
 };
