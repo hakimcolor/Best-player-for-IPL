@@ -31,7 +31,7 @@ function App() {
   return (
     <div>
       <Navber availableBalance={availableBalance} />
-      <div className="items-center flex justify-between 2xl:max-w-[1300px] md:max-w-[800px] mx-auto mt-20">
+      {/* <div className="items-center flex justify-between 2xl:max-w-[1300px] md:max-w-[800px] mx-auto mt-20">
         <div className=" font-bold text-[30px]">
           {returand
             ? `Selected Player (${selectedPlr.length}/7)`
@@ -53,6 +53,38 @@ function App() {
             } p-3  w-32`}
           >
             Selected<span>({selectedPlr.length})</span>
+          </button>
+        </div>
+      </div> */}
+      <div className="flex flex-col md:flex-row items-center justify-between 2xl:max-w-[1300px] md:max-w-[800px] mx-auto mt-20 px-4">
+        {/* Title */}
+        <div className="font-bold text-2xl sm:text-3xl mb-4 md:mb-0">
+          {returand
+            ? `Selected Player (${selectedPlr.length}/7)`
+            : 'Available players'}
+        </div>
+
+        {/* Buttons */}
+        <div className="flex w-full md:w-auto">
+          <button
+            onClick={handeldClick}
+            className={`flex-1 md:flex-none shadow-2xl ${
+              returand
+                ? 'bg-gray-100 text-black font-bold'
+                : 'bg-cyan-600 text-white font-bold'
+            } p-3 rounded-l-2xl md:w-32 text-center`}
+          >
+            Available
+          </button>
+          <button
+            onClick={handeldClick}
+            className={`flex-1 md:flex-none shadow-2xl ${
+              returand
+                ? 'bg-red-600 text-white font-bold'
+                : 'bg-gray-100 text-black font-bold'
+            } p-3 rounded-r-2xl md:w-32 text-center`}
+          >
+            Selected <span>({selectedPlr.length})</span>
           </button>
         </div>
       </div>
